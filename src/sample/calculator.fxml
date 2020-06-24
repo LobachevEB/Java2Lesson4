@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="sample.Calculator"
+      prefHeight="400.0" prefWidth="600.0"
+      spacing="10" layoutX="10">
+    <stylesheets>
+        <URL value="@/css/style.css"/>
+    </stylesheets>
+
+    <TextField fx:id="resultText"  text="0"  editable="false"/>
+    <HBox fx:id="buttonsArea" spacing="5">
+        <GridPane hgap="10" vgap="10" >
+            <Button fx:id="b7" text="7" GridPane.columnIndex="0" GridPane.rowIndex="0" minWidth="50" minHeight="50" onAction="#btnPress"/>
+            <Button fx:id="b8" text="8" GridPane.columnIndex="1" GridPane.rowIndex="0" minWidth="50" minHeight="50" onAction="#btnPress"/>
+            <Button fx:id="b9" text="9" GridPane.columnIndex="2" GridPane.rowIndex="0" minWidth="50" minHeight="50" onAction="#btnPress"/>
+            <Button fx:id="bMul" text="*" GridPane.columnIndex="3" GridPane.rowIndex="0" minWidth="50" minHeight="50" onAction="#btnPress"/>
+            <Button fx:id="b4" text="4" GridPane.columnIndex="0" GridPane.rowIndex="1" minWidth="50" minHeight="50" onAction="#btnPress"/>
+            <Button fx:id="b5" text="5" GridPane.columnIndex="1" GridPane.rowIndex="1" minWidth="50" minHeight="50" onAction="#btnPress"/>
+            <Button fx:id="b6" text="6" GridPane.columnIndex="2" GridPane.rowIndex="1" minWidth="50" minHeight="50" onAction="#btnPress"/>
+            <Button fx:id="bDiv" text="/" GridPane.columnIndex="3" GridPane.rowIndex="1" minWidth="50" minHeight="50" onAction="#btnPress"/>
+            <Button fx:id="b1" text="1" GridPane.columnIndex="0" GridPane.rowIndex="2" minWidth="50" minHeight="50" onAction="#btnPress"/>
+            <Button fx:id="b2" text="2" GridPane.columnIndex="1" GridPane.rowIndex="2" minWidth="50" minHeight="50" onAction="#btnPress"/>
+            <Button fx:id="b3" text="3" GridPane.columnIndex="2" GridPane.rowIndex="2" minWidth="50" minHeight="50" onAction="#btnPress"/>
+            <Button fx:id="bPlus" text="+" GridPane.columnIndex="3" GridPane.rowIndex="2" minWidth="50" minHeight="50" onAction="#btnPress"/>
+            <Button fx:id="bRemove" text="&lt;&lt;" GridPane.columnIndex="0" GridPane.rowIndex="3" minWidth="50" minHeight="50" onAction="#btnPress"/>
+            <Button fx:id="b0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3" minWidth="50" minHeight="50" onAction="#btnPress"/>
+            <Button fx:id="bComma" text="." GridPane.columnIndex="2" GridPane.rowIndex="3" minWidth="50" minHeight="50" onAction="#btnPress"/>
+            <Button fx:id="bMinus" text="-" GridPane.columnIndex="3" GridPane.rowIndex="3" minWidth="50" minHeight="50" onAction="#btnPress"/>
+        </GridPane>
+        <TextArea fx:id="history" editable="false" />
+    </HBox>
+    <Button fx:id="bResult" text="="  minWidth="230" minHeight="50" onAction="#doCalculation"/>
+</VBox>
